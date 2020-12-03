@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1><%=listName%></h1>
+    </div>
+
+    <div class="box">
+      <%listItems.forEach(function(item){ %>
+      <form action="/delete" method="POST">
+        <div class="item">
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="<%=item._id%>"
+            onchange="this.form.submit()"
+          />
+          <p><%= item.name %></p>
+        </div>
+        <input type="hidden" name="listName" value="<%= listName %>" />
+      </form>
+      <%}); %>
+
+      <form class="item" action="/" method="POST">
+        <input
+          type="text"
+          name="nextTask"
+          placeholder="New Item"
+          autofocus=""
+          autocomplete="off"
+        />
+        <button
+          class="button-add"
+          value="<%= listName%>"
+          name="list"
+          type="submit"
+        >
+          +
+        </button>
+      </form>
+    </div>
+
+    <form class="clear" action="/clear" method="POST">
+      <button
+        class="button-clear"
+        value="<%= listName %>"
+        name="list"
+        type="submit"
+      >
+        Clear
+      </button>
+    </form>
+    <form
+      class="reset <% if (main !== true){%> hide <% } %>"
+      action="/reset"
+      method="POST"
+    >
+      <button class="button-reset" type="submit">Reset</button>
+    </form>
+  </body>
+</html>

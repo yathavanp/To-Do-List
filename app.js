@@ -33,11 +33,11 @@ const Item = mongoose.model("Item", itemsSchema);
 const List = mongoose.model("List", listSchema);
 
 const item1 = new Item({
-  name: "This is your todo list",
+  name: "This is your todo list, type below to and press '+' add new task",
 });
 
 const item2 = new Item({
-  name: "Type below to and press '+' add new task",
+  name: "New lists can be made by typing '/list-title' following the URL",
 });
 
 app.get("/", function (req, res) {

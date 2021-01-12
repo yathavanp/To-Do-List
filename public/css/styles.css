@@ -1,13 +1,13 @@
 html {
-  background-color: #dbe2ef;
-  background-image: -webkit-linear-gradient(65deg, #112d4e 50%, #dbe2ef 50%);
+  background-color: #58709c;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   min-height: 1000px;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Mukta', sans-serif;
 }
 
 h1 {
   color: #fff;
-  padding: 10px;
+  padding: 15px;
 }
 
 
@@ -16,11 +16,11 @@ button:focus{
 }
 
 .box {
-  max-width: 400px;
+  max-width: 410px;
   margin: 50px auto;
   background: white;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.404);
 }
 
 #heading {
@@ -73,14 +73,14 @@ form.item {
 }
 
 .button-add {
-  min-height: 50px;
-  width: 50px;
+  min-height: 45px;
+  width: 45px;
   border-radius: 50%;
   border-color: transparent;
   background-color: #3f72af;
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
+  margin-left: 10px;
   border-width: 0;
 }
 
@@ -94,6 +94,7 @@ form.item {
   font-size: 20px;
   padding-bottom: 6px;
   border-width: 0;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.404);
 }
 
 .hide{
@@ -110,6 +111,7 @@ form.item {
   font-size: 25px;
   padding-bottom: 6px;
   border-width: 0;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.404);
 }
 
 input[type="text"] {

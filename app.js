@@ -12,6 +12,7 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
+//Initializing MongoDB Databaase and Schema
 mongoose.connect(process.env.DB_ROUTE, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -30,6 +31,7 @@ const Item = mongoose.model("Item", itemsSchema);
 
 const List = mongoose.model("List", listSchema);
 
+//Initializing Two Constant List Items List is Clear
 const item1 = new Item({
   name: "This is your todo list, type below to and press '+' add new task",
 });
@@ -38,6 +40,7 @@ const item2 = new Item({
   name: "New lists can be made by typing '/list-title' following the URL",
 });
 
+//GET & POST Methods
 app.get("/", function (req, res) {
   Item.find(function (err, foundItems) {
     if (err) {
@@ -159,6 +162,7 @@ app.post("/reset", function (req, res) {
   res.redirect("/");
 });
 
+//Initializing Server
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;

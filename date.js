@@ -1,5 +1,6 @@
 module.exports.getDate = getDate;
 
+//Getting Date Function
 function getDate() {
   const date = new Date();
 
